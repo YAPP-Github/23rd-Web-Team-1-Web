@@ -90,8 +90,10 @@ const TileContent = ({
   });
 
   data.forEach((item) => {
+    const key = item instanceof Date ? item.toString() : `${item}`;
+
     if (format(item, 'yyyy-MM-dd') === format(date, 'yyyy-MM-dd')) {
-      html.push(<div key={date.getDate()} className={dot}></div>);
+      html.push(<div key={key} className={dot}></div>);
     }
   });
 

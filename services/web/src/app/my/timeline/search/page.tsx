@@ -1,11 +1,12 @@
 'use client';
 import { useAtomValue } from 'jotai';
+import { NextPage } from 'next';
 
 import TimelineSearch from '../component/TimelineSearch/TimelineSearch';
 import { useGetSearchSchedule } from '../hooks/useGetSearchSchedule';
 import { selectDateAtom } from '../stores/store';
 
-export default function TimelineSearchPage() {
+const TimelineSearchPage: NextPage = () => {
   const selectedDate = useAtomValue(selectDateAtom);
 
   const startTime = `${selectedDate} 00:00:00`;
@@ -14,4 +15,6 @@ export default function TimelineSearchPage() {
   const { data: selectedData } = useGetSearchSchedule(startTime, endTime, 32);
 
   return <TimelineSearch schedules={selectedData.schedules} />;
-}
+};
+
+export default TimelineSearchPage;

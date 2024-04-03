@@ -1,8 +1,7 @@
 'use client';
 
-import { Calendar, Txt } from '@linker/lds';
+import { Calendar, Txt, Icon } from '@linker/lds';
 import { colors } from '@linker/styles';
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -33,12 +32,7 @@ const TimelineNull = () => {
       />
       <article className={container}>
         <section className={wrapper}>
-          <Image
-            src={'https://static.im-linker.com/images/Subtract.svg'}
-            width={48}
-            height={48}
-            alt={'subtract'}
-          />
+          <Icon name="subtract" size={48} />
           <Txt typography="p1" color={colors.gray700} fontWeight="regular">
             예정된 일정이 없습니다.
           </Txt>

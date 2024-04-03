@@ -11,3 +11,11 @@ export const wrapper = style({
 export const searchInputWrapper = style({
   marginTop: '1.9rem',
 });
+
+export const nonLoginWrapper = style({
+  width: '100%',
+  height: '30rem',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+});
